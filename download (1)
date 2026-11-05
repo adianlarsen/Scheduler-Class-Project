@@ -1,0 +1,10 @@
+class Meeting {
+  constructor({ id, groupId, title, start, end }) {
+    this.id = id;
+    this.groupId = groupId;
+    this.title = title;
+    this.start = start;
+    this.end = end;
+  }
+}
+module.exports = Meeting;

@@ -1,0 +1,9 @@
+class Schedule {
+  // busyBlocks: [ { start, end }, ... ]
+  constructor({ id, userId, busyBlocks = [] }) {
+    this.id = id;
+    this.userId = userId;
+    this.busyBlocks = busyBlocks;
+  }
+}
+module.exports = Schedule;
