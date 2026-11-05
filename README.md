@@ -1,2 +1,10 @@
-# Scheduler-Class-Project
-Main repository for final project for Nishwa Tuniki's Intro to Software Engineering Course
+namespace GroupSchedulerApp.Models;
+
+public class Meeting
+{
+    public int Id { get; set; }
+    public int GroupId { get; set; }
+    public string Title { get; set; } = "";
+    public DateTime Start { get; set; }
+    public DateTime End { get; set; }
+}
