@@ -1,4 +1,4 @@
-using GroupSchedulerApp.Repositories;
+/* using GroupSchedulerApp.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GroupSchedulerApp.Controllers;
@@ -19,4 +19,4 @@ public class TasksController : ControllerBase
 
     [HttpPatch("{taskId}/status")]
     public IActionResult UpdateStatus(int taskId) => StatusCode(501, "Not implemented");
-}
+} */
