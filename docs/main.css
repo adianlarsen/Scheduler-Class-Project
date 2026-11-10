@@ -20,3 +20,59 @@ public class TasksController : ControllerBase
     [HttpPatch("{taskId}/status")]
     public IActionResult UpdateStatus(int taskId) => StatusCode(501, "Not implemented");
 } */
+:root {
+  --navBar: #aad2ff;
+  --navButtonHover: #bbdbff;
+  --footer: #ced2db;
+  --sideBackgroundColor: #e6e4e4;
+}
+body {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+  display: flex;
+}
+.mainSpacer{
+    background-color: var(--sideBackgroundColor);
+    flex-grow: 1;
+}
+.mainSection{
+    flex-grow: 10;
+}
+#navBar {
+  background-color: var(--navBar);
+}
+#navList {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.navButton {
+padding: 16px;
+flex-grow: 2;
+    text-align: center;
+}
+.navLink{
+    text-decoration: none;
+    padding: 16px;
+}
+.navButton:hover {
+  background-color: var(--navButtonHover);
+  transition: 0.5s;
+}
+.navBuffer {
+  flex-grow: 1;
+}
+.footer {
+  background-color: var(--footer);
+  padding: 16px;
+}

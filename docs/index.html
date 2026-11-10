@@ -8,18 +8,24 @@
   </head>
   <body>
     <nav id="navBar">
-      <ul>
-        <li>
-          <a href="calendar.html">Calendar</a>
+      <ul id="navList">
+        <li class="navBuffer"></li>
+        <li class="navButton">
+          <a href="calendar.html" class="navLink">Calendar</a>
         </li>
-        <li>
-          <a href="">Some other page</a>
+        <li class="navButton">
+          <a href="" class="navLink">Some other page</a>
         </li>
+        <li class="navBuffer"></li>
       </ul>
     </nav>
-    <main>The main body of the page</main>
+    <main>
+      <aside class="mainSpacer"></aside>
+      <section class="mainSection"></section>
+      <aside class="mainSpacer"></aside>
+    </main>
   </body>
-  <footer>YIPPEE</footer>
+  <footer class="footer">.</footer>
 </html>
 <!-- using GroupSchedulerApp.Repositories;
 using Microsoft.AspNetCore.Mvc;
