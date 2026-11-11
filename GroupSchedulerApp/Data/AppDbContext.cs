@@ -21,3 +21,4 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Schedule>().OwnsMany(s => s.BusyBlocks);
     }
 }
+

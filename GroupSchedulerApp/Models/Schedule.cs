@@ -1,3 +1,4 @@
+
 namespace GroupSchedulerApp.Models;
 
 // One member's schedule, stored as the blocks of time they are busy.

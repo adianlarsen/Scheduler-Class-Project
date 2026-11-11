@@ -1,3 +1,4 @@
+
 namespace GroupSchedulerApp.Models;
 
 // A span of time (used for busy blocks and free blocks).
