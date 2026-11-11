@@ -1,0 +1,22 @@
+using GroupSchedulerApp.Repositories;
+using Microsoft.AspNetCore.Mvc;
+
+namespace GroupSchedulerApp.Controllers;
+
+// Layer 2: tasks and the task board (to do, in progress, review, done).
+[ApiController]
+[Route("api/tasks")]
+public class TasksController : ControllerBase
+{
+    private readonly TaskRepository _tasks;
+    public TasksController(TaskRepository tasks) => _tasks = tasks;
+
+    [HttpPost]
+    public IActionResult AddTask() => StatusCode(501, "Not implemented");
+
+    [HttpGet("group/{groupId}")]
+    public IActionResult GetTaskBoard(int groupId) => StatusCode(501, "Not implemented");
+
+    [HttpPatch("{taskId}/status")]
+    public IActionResult UpdateStatus(int taskId) => StatusCode(501, "Not implemented");
+}

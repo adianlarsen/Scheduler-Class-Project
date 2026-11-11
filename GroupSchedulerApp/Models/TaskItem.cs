@@ -1,3 +1,4 @@
+
 namespace GroupSchedulerApp.Models;
 
 public enum TaskStatus
