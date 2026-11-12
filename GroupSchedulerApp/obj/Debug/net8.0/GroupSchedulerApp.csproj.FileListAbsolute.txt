@@ -1,0 +1,8 @@
+/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/GroupSchedulerApp/obj/Debug/net8.0/GroupSchedulerApp.csproj.AssemblyReference.cache
+/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/GroupSchedulerApp/obj/Debug/net8.0/rpswa.dswa.cache.json
+/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/GroupSchedulerApp/obj/Debug/net8.0/GroupSchedulerApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/GroupSchedulerApp/obj/Debug/net8.0/GroupSchedulerApp.AssemblyInfoInputs.cache
+/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/GroupSchedulerApp/obj/Debug/net8.0/GroupSchedulerApp.AssemblyInfo.cs
+/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/GroupSchedulerApp/obj/Debug/net8.0/GroupSchedulerApp.csproj.CoreCompileInputs.cache
+/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/GroupSchedulerApp/obj/Debug/net8.0/GroupSchedulerApp.MvcApplicationPartsAssemblyInfo.cache
+/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/GroupSchedulerApp/obj/Debug/net8.0/GroupSchedulerApp.sourcelink.json
