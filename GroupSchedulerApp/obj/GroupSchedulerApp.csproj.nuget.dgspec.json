@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/GroupSchedulerApp/GroupSchedulerApp.csproj": {}
+    "/Users/adianlarsen/Desktop/Scheduler-Class-Project/GroupSchedulerApp/GroupSchedulerApp.csproj": {}
   },
   "projects": {
-    "/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/GroupSchedulerApp/GroupSchedulerApp.csproj": {
+    "/Users/adianlarsen/Desktop/Scheduler-Class-Project/GroupSchedulerApp/GroupSchedulerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/GroupSchedulerApp/GroupSchedulerApp.csproj",
+        "projectUniqueName": "/Users/adianlarsen/Desktop/Scheduler-Class-Project/GroupSchedulerApp/GroupSchedulerApp.csproj",
         "projectName": "GroupSchedulerApp",
-        "projectPath": "/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/GroupSchedulerApp/GroupSchedulerApp.csproj",
+        "projectPath": "/Users/adianlarsen/Desktop/Scheduler-Class-Project/GroupSchedulerApp/GroupSchedulerApp.csproj",
         "packagesPath": "/Users/adianlarsen/.nuget/packages/",
-        "outputPath": "/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/GroupSchedulerApp/obj/",
+        "outputPath": "/Users/adianlarsen/Desktop/Scheduler-Class-Project/GroupSchedulerApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/adianlarsen/.nuget/NuGet/NuGet.Config"

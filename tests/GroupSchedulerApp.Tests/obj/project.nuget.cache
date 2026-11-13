@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lCkI7pFyZdk=",
+  "dgSpecHash": "U9RdznTLeJc=",
   "success": true,
-  "projectFilePath": "/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/tests/GroupSchedulerApp.Tests/GroupSchedulerApp.Tests.csproj",
+  "projectFilePath": "/Users/adianlarsen/Desktop/Scheduler-Class-Project/tests/GroupSchedulerApp.Tests/GroupSchedulerApp.Tests.csproj",
   "expectedPackageFiles": [
     "/Users/adianlarsen/.nuget/packages/microsoft.codecoverage/17.11.1/microsoft.codecoverage.17.11.1.nupkg.sha512",
     "/Users/adianlarsen/.nuget/packages/microsoft.net.test.sdk/17.11.1/microsoft.net.test.sdk.17.11.1.nupkg.sha512",

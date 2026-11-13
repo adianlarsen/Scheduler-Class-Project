@@ -871,11 +871,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/tests/GroupSchedulerApp.Tests/GroupSchedulerApp.Tests.csproj",
+      "projectUniqueName": "/Users/adianlarsen/Desktop/Scheduler-Class-Project/tests/GroupSchedulerApp.Tests/GroupSchedulerApp.Tests.csproj",
       "projectName": "GroupSchedulerApp.Tests",
-      "projectPath": "/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/tests/GroupSchedulerApp.Tests/GroupSchedulerApp.Tests.csproj",
+      "projectPath": "/Users/adianlarsen/Desktop/Scheduler-Class-Project/tests/GroupSchedulerApp.Tests/GroupSchedulerApp.Tests.csproj",
       "packagesPath": "/Users/adianlarsen/.nuget/packages/",
-      "outputPath": "/Users/adianlarsen/Desktop/Data Structures/Scheduler-Class-Project/tests/GroupSchedulerApp.Tests/obj/",
+      "outputPath": "/Users/adianlarsen/Desktop/Scheduler-Class-Project/tests/GroupSchedulerApp.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/adianlarsen/.nuget/NuGet/NuGet.Config"
