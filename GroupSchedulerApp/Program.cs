@@ -1,29 +1,47 @@
 using GroupSchedulerApp.Data;
 using GroupSchedulerApp.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Layer 2: controllers
 builder.Services.AddControllers();
 
-// Layer 4: database
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("Default")));
+// Layer 4: JSON storage
+// One shared instance keeps file updates synchronized.
+// Store data outside wwwroot so it is not publicly downloadable.
+builder.Services.AddSingleton<JsonDataStore>(_ =>
+{
+    var filePath = Path.Combine(
+        builder.Environment.ContentRootPath,
+        "App_Data",
+        "scheduler.json");
+
+    return new JsonDataStore(filePath);
+});
 
 // Layer 3: repositories
+//
+// TODO (Jace): Finish connecting the backend to JSON storage.
+// - Convert GroupRepository and MeetingRepository from AppDbContext
+//   to JsonDataStore, using its Read and Update methods.
+// - Create ScheduleRepository and TaskRepository with the methods
+//   their controllers need, then register them below.
+// - Check controllers for references to those missing classes.
+//
+// IMPORTANT: JSON integration is not finished. The existing group
+// and meeting repositories still require AppDbContext, which is no
+// longer registered. Their endpoints will fail until converted.
 builder.Services.AddScoped<GroupRepository>();
-builder.Services.AddScoped<ScheduleRepository>();
-builder.Services.AddScoped<TaskRepository>();
 builder.Services.AddScoped<MeetingRepository>();
+
+// Uncomment after these classes are implemented:
+// builder.Services.AddScoped<ScheduleRepository>();
+// builder.Services.AddScoped<TaskRepository>();
 
 var app = builder.Build();
 
-// Create the database file and tables on first run
-using (var scope = app.Services.CreateScope())
-{
-    scope.ServiceProvider.GetRequiredService<AppDbContext>().Database.EnsureCreated();
-}
+// JsonDataStore creates scheduler.json on the first successful update.
+// SQLite database initialization is no longer used.
 
 // Layer 1: serve the HTML/CSS/JS in wwwroot
 app.UseDefaultFiles();
