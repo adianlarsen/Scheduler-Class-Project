@@ -1,61 +1,115 @@
 using GroupSchedulerApp.Data;
 using GroupSchedulerApp.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace GroupSchedulerApp.Repositories;
 
-// Layer 3: saves and loads meetings and work sessions.
+// Saves meetings and work sessions using the shared JSON store.
 public class MeetingRepository
 {
-    private readonly AppDbContext _db;
-    public MeetingRepository(AppDbContext db) => _db = db;
+    private readonly JsonDataStore _store;
 
-    // Adds a new meeting, or updates it if it already exists.
+    public MeetingRepository(JsonDataStore store) => _store = store;
+
     public Meeting SaveMeeting(Meeting meeting)
     {
-        if (meeting.Id == 0)
-            _db.Meetings.Add(meeting);
-        else
-            _db.Meetings.Update(meeting);
+        if (meeting.End <= meeting.Start)
+            throw new ArgumentException("Meeting end must be after start.");
 
-        _db.SaveChanges();
-        return meeting;
+        return _store.Update(data =>
+        {
+            if (!data.Groups.Any(g => g.Id == meeting.GroupId))
+                throw new ArgumentException("The group does not exist.");
+
+            Meeting saved;
+
+            if (meeting.Id == 0)
+            {
+                saved = new Meeting { Id = data.NextMeetingId++ };
+                data.Meetings.Add(saved);
+            }
+            else
+            {
+                saved = data.Meetings.FirstOrDefault(m => m.Id == meeting.Id)
+                    ?? throw new KeyNotFoundException("Meeting not found.");
+            }
+
+            saved.GroupId = meeting.GroupId;
+            saved.Title = meeting.Title;
+            saved.Start = meeting.Start;
+            saved.End = meeting.End;
+
+            meeting.Id = saved.Id;
+            return saved;
+        });
     }
 
-    // Returns all meetings for a group, earliest first.
-    public List<Meeting> FindByGroup(int groupId)
-    {
-        return _db.Meetings
+    public List<Meeting> FindByGroup(int groupId) =>
+        _store.Read(data => data.Meetings
             .Where(m => m.GroupId == groupId)
             .OrderBy(m => m.Start)
-            .ToList();
-    }
+            .ToList());
 
-    // Returns the meeting, or null if it doesn't exist.
-    public Meeting? FindMeetingById(int id)
-    {
-        return _db.Meetings.Find(id);
-    }
+    public Meeting? FindMeetingById(int id) =>
+        _store.Read(data => data.Meetings.FirstOrDefault(m => m.Id == id));
 
-    // Adds a new work session, or updates it if it already exists.
+    // Save replaces the full work-session member list.
     public WorkSession SaveWorkSession(WorkSession session)
     {
-        if (session.Id == 0)
-            _db.WorkSessions.Add(session);
-        else
-            _db.WorkSessions.Update(session);
+        if (session.End <= session.Start)
+            throw new ArgumentException("Work session end must be after start.");
 
-        _db.SaveChanges();
-        return session;
+        return _store.Update(data =>
+        {
+            if (!data.Tasks.Any(t => t.Id == session.TaskItemId))
+                throw new ArgumentException("The task does not exist.");
+
+            var memberIds = session.Members.Select(u => u.Id).ToHashSet();
+            var members = data.Users
+                .Where(u => memberIds.Contains(u.Id)).ToList();
+
+            if (members.Count != memberIds.Count)
+                throw new ArgumentException("One or more users do not exist.");
+
+            WorkSession saved;
+
+            if (session.Id == 0)
+            {
+                saved = new WorkSession { Id = data.NextWorkSessionId++ };
+                data.WorkSessions.Add(saved);
+            }
+            else
+            {
+                saved = data.WorkSessions
+                    .FirstOrDefault(w => w.Id == session.Id)
+                    ?? throw new KeyNotFoundException("Work session not found.");
+            }
+
+            saved.TaskItemId = session.TaskItemId;
+            saved.Start = session.Start;
+            saved.End = session.End;
+            saved.Members = members;
+
+            // Keep User.WorkSessions consistent with WorkSession.Members.
+            foreach (var user in data.Users)
+            {
+                foreach (var previous in user.WorkSessions
+                    .Where(w => w.Id == saved.Id).ToList())
+                {
+                    user.WorkSessions.Remove(previous);
+                }
+
+                if (memberIds.Contains(user.Id))
+                    user.WorkSessions.Add(saved);
+            }
+
+            session.Id = saved.Id;
+            return saved;
+        });
     }
 
-    // Returns all work sessions for a task, with their members, earliest first.
-    public List<WorkSession> FindWorkSessionsByTask(int taskItemId)
-    {
-        return _db.WorkSessions
-            .Include(w => w.Members)
+    public List<WorkSession> FindWorkSessionsByTask(int taskItemId) =>
+        _store.Read(data => data.WorkSessions
             .Where(w => w.TaskItemId == taskItemId)
             .OrderBy(w => w.Start)
-            .ToList();
-    }
+            .ToList());
 }
