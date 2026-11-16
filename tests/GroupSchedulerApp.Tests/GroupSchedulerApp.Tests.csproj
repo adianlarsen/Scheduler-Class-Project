@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../src/GroupSchedulerApp/GroupSchedulerApp.csproj" />
+    <ProjectReference Include="../../GroupSchedulerApp/GroupSchedulerApp.csproj" />
   </ItemGroup>
 
 </Project>
