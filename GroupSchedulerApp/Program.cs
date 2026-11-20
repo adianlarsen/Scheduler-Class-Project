@@ -24,6 +24,7 @@ builder.Services.AddScoped<GroupRepository>();
 builder.Services.AddScoped<MeetingRepository>();
 builder.Services.AddScoped<TaskRepository>();
 builder.Services.AddScoped<ScheduleRepository>();
+builder.Services.AddScoped<UserRepository>();
 
 var app = builder.Build();
 
