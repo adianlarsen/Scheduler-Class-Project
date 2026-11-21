@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6TrG7bV/rp4=",
+  "dgSpecHash": "SXjqU2PPt5s=",
   "success": true,
-  "projectFilePath": "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj",
+  "projectFilePath": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maste\\.nuget\\packages\\microsoft.codecoverage\\17.11.1\\microsoft.codecoverage.17.11.1.nupkg.sha512",
     "C:\\Users\\maste\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.10\\microsoft.data.sqlite.core.8.0.10.nupkg.sha512",

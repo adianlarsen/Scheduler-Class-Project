@@ -1914,11 +1914,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj",
       "projectName": "GroupSchedulerApp.Tests",
-      "projectPath": "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj",
+      "projectPath": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj",
       "packagesPath": "C:\\Users\\maste\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\obj\\",
+      "outputPath": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\maste\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1933,8 +1933,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj": {
-              "projectPath": "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj"
+            "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj": {
+              "projectPath": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj"
             }
           }
         }

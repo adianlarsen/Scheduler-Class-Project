@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj": {}
+    "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj": {
+    "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj",
+        "projectUniqueName": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj",
         "projectName": "GroupSchedulerApp",
-        "projectPath": "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj",
+        "projectPath": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj",
         "packagesPath": "C:\\Users\\maste\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\obj\\",
+        "outputPath": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maste\\AppData\\Roaming\\NuGet\\NuGet.Config"
