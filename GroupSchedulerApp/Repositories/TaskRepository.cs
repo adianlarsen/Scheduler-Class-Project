@@ -80,6 +80,31 @@ public class TaskRepository
         });
     }
 
+    // Controller usage for PATCH /api/tasks/{taskId}/status:
+    // var updatedTask = _tasks.UpdateStatus(taskId, newStatus);
+    // if (updatedTask == null) return NotFound();
+    // return Ok(updatedTask);
+    //
+    // newStatus uses the TaskStatus enum from our Models folder.
+    // The controller should return BadRequest for an invalid status.
+    public TaskItem? UpdateStatus(int taskId, GroupSchedulerApp.Models.TaskStatus newStatus)
+    {
+        if (!Enum.IsDefined(newStatus))
+            throw new ArgumentOutOfRangeException(nameof(newStatus), "Unknown task status.");
+
+        return _store.Update<TaskItem?>(data =>
+        {
+            var task = data.Tasks.FirstOrDefault(t => t.Id == taskId);
+            if (task == null)
+                return null;
+
+            // Change the stored task inside the locked update so a status change
+            // preserves any edits another request just made to its other fields.
+            task.Status = newStatus;
+            return task;
+        });
+    }
+    
     public TaskItem? FindById(int id) =>
         _store.Read(data => data.Tasks.FirstOrDefault(t => t.Id == id));
 
