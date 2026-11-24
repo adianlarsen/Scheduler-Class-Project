@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\22jni\\se\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj": {}
+    "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\22jni\\se\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj": {
+    "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\22jni\\se\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj",
+        "projectUniqueName": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj",
         "projectName": "GroupSchedulerApp",
-        "projectPath": "C:\\Users\\22jni\\se\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj",
-        "packagesPath": "C:\\Users\\22jni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\22jni\\se\\Scheduler-Class-Project\\GroupSchedulerApp\\obj\\",
+        "projectPath": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj",
+        "packagesPath": "C:\\Users\\maste\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\22jni\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\maste\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -69,19 +63,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.25, 8.0.25]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
+              "version": "[8.0.23, 8.0.23]"
             }
           ],
           "frameworkReferences": {
@@ -92,40 +86,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\22jni\\se\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj": {
+    "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\22jni\\se\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj",
         "projectName": "GroupSchedulerApp.Tests",
-        "projectPath": "C:\\Users\\22jni\\se\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj",
-        "packagesPath": "C:\\Users\\22jni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\22jni\\se\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\obj\\",
+        "projectPath": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\GroupSchedulerApp.Tests.csproj",
+        "packagesPath": "C:\\Users\\maste\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\tests\\GroupSchedulerApp.Tests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\22jni\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\maste\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\22jni\\se\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj": {
-                "projectPath": "C:\\Users\\22jni\\se\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj"
+              "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj": {
+                "projectPath": "C:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj"
               }
             }
           }
@@ -140,7 +128,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -173,15 +161,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
+              "version": "[8.0.23, 8.0.23]"
             }
           ],
           "frameworkReferences": {
@@ -189,7 +177,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

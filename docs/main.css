@@ -1,47 +1,103 @@
-<<<<<<<< HEAD:docs/main.css
-/* using GroupSchedulerApp.Repositories;
-using Microsoft.AspNetCore.Mvc;
-
-namespace GroupSchedulerApp.Controllers;
-
-// Layer 2: tasks and the task board (to do, in progress, review, done).
-[ApiController]
-[Route("api/tasks")]
-public class TasksController : ControllerBase
-{
-    private readonly TaskRepository _tasks;
-    public TasksController(TaskRepository tasks) => _tasks = tasks;
-
-    [HttpPost]
-    public IActionResult AddTask() => StatusCode(501, "Not implemented");
-
-    [HttpGet("group/{groupId}")]
-    public IActionResult GetTaskBoard(int groupId) => StatusCode(501, "Not implemented");
-
-    [HttpPatch("{taskId}/status")]
-    public IActionResult UpdateStatus(int taskId) => StatusCode(501, "Not implemented");
-} */
-========
-using GroupSchedulerApp.Repositories;
-using Microsoft.AspNetCore.Mvc;
-
-namespace GroupSchedulerApp.Controllers;
-
-// Layer 2: tasks and the task board (to do, in progress, review, done).
-[ApiController]
-[Route("api/tasks")]
-public class TasksController : ControllerBase
-{
-    private readonly TaskRepository _tasks;
-    public TasksController(TaskRepository tasks) => _tasks = tasks;
-
-    [HttpPost]
-    public IActionResult AddTask() => StatusCode(501, "Not implemented");
-
-    [HttpGet("group/{groupId}")]
-    public IActionResult GetTaskBoard(int groupId) => StatusCode(501, "Not implemented");
-
-    [HttpPatch("{taskId}/status")]
-    public IActionResult UpdateStatus(int taskId) => StatusCode(501, "Not implemented");
+:root {
+  --navBar: #0d347d;
+  --navButtonHover: #1245a3;
+  --navtext:#8de3ff;
+  --footer: #00133d;
+  --mainColor:#000b22;
+  --sideBackgroundColor: var(--mainColor);
+  --calendarColor:#00236f;
+  --dayRowColor:var(--calendarColor);
+  --dayCardColor:#003fc6;
+  --cardHoverBorder:#88aeff;
 }
->>>>>>>> c708fea585308377d0c13814229814947c2421f5:GroupSchedulerApp/Controllers/TasksController.cs
+body {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+  display: flex;
+}
+.mainSpacer{
+    background-color: var(--sideBackgroundColor);
+    flex-grow: 1;
+}
+.mainSection{
+    flex-grow: 10; 
+    background-color: var(--mainColor);
+
+}
+#navBar {
+  background-color: var(--navBar);
+}
+#navList {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.navButton {
+  padding: 16px;
+  flex-grow: 2;
+  text-align: center;
+}
+.navLink{
+  color: var(--navtext);
+  text-decoration: none;
+    padding: 16px;
+}
+.navButton:hover {
+  background-color: var(--navButtonHover);
+  transition: 0.5s;
+}
+.navBuffer {
+  flex-grow: 1;
+}
+.footer {
+  background-color: var(--footer);
+  padding: 16px;
+  display: none;
+}
+#calendar{
+  background-color: var(--calendarColor);
+  margin: 1%;
+  padding: 1%;
+  height: 90%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.calendarRow{
+  background-color: var(--dayRowColor);
+  flex-grow: 1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 3px;
+  padding-right: 3px;
+}
+.dayCard{
+  background-color: var(--dayCardColor);
+  border-radius: 10px;
+  flex-grow: 1;
+  margin-left: 3px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--dayCardColor);
+}
+.dayCard:hover{
+  scale: 110%;
+  transition: 0.25s;
+  border-color: var(--cardHoverBorder);
+}
+#month{
+  color: var(--navtext);
+  text-align: center;
+  padding-bottom: 5px;
+}
