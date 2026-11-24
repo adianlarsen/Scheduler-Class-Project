@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GroupSchedulerApp.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50094ee5216d19438545f156418a83a782a2b10d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6918067189329aafe081cc4462c41f26e54a1b70")]
 [assembly: System.Reflection.AssemblyProductAttribute("GroupSchedulerApp.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GroupSchedulerApp.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

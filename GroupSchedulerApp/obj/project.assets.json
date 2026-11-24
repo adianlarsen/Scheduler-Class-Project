@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net8.0": {
       "Microsoft.Data.Sqlite.Core/8.0.10": {
@@ -1033,28 +1033,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maste\\.nuget\\packages\\": {}
+    "C:\\Users\\jace.nielson\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj",
+      "projectUniqueName": "C:\\Users\\jace.nielson\\se\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj",
       "projectName": "GroupSchedulerApp",
-      "projectPath": "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj",
-      "packagesPath": "C:\\Users\\maste\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\maste\\code\\softwareFinal\\Scheduler-Class-Project\\GroupSchedulerApp\\obj\\",
+      "projectPath": "C:\\Users\\jace.nielson\\se\\Scheduler-Class-Project\\GroupSchedulerApp\\GroupSchedulerApp.csproj",
+      "packagesPath": "C:\\Users\\jace.nielson\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jace.nielson\\se\\Scheduler-Class-Project\\GroupSchedulerApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\maste\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\jace.nielson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {}
         }
@@ -1069,10 +1075,11 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.400"
     },
     "frameworks": {
       "net8.0": {
+        "framework": "net8.0",
         "targetAlias": "net8.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Sqlite": {
@@ -1094,19 +1101,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.30, 8.0.30]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.30, 8.0.30]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.30, 8.0.30]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.30, 8.0.30]"
           }
         ],
         "frameworkReferences": {
@@ -1117,7 +1124,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
