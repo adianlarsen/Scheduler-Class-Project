@@ -1,10 +1,12 @@
 using GroupSchedulerApp.Models;
 using GroupSchedulerApp.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using GroupSchedulerApp.Importers;
 
 namespace GroupSchedulerApp.Controllers;
 
-public record ImportScheduleRequest(int UserId, List<TimeBlock> BusyBlocks);
+public record ImportScheduleRequest(int UserId, List<TimeBlock>? BusyBlocks, string? IcsContent);
+
 public record CreateMeetingRequest(int GroupId, string Title, DateTime Start, DateTime End);
 
 // Layer 2: schedules, meetings, and common availability.
@@ -21,17 +23,35 @@ public class SchedulesController : ControllerBase
         _meetings = meetings;
     }
 
-    // Saves a user's busy times, replacing any earlier schedule for that user.
-    // Reading .ics calendar files will be added later through ScheduleImporter.
+    // Send either busyBlocks (a list of start/end times) or icsContent (the text of a .ics file).
     [HttpPost("import")]
     public IActionResult ImportSchedule(ImportScheduleRequest request)
     {
-        if (request.BusyBlocks == null)
-            return BadRequest("Busy blocks are required.");
+        List<TimeBlock> blocks;
+
+        if (!string.IsNullOrWhiteSpace(request.IcsContent))
+        {
+            try
+            {
+                blocks = ScheduleImporter.ParseSchedule(request.IcsContent);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        else if (request.BusyBlocks != null)
+        {
+            blocks = request.BusyBlocks;
+        }
+        else
+        {
+            return BadRequest("Send busy blocks or calendar (.ics) text.");
+        }
 
         try
         {
-            var saved = _schedules.SaveForUser(request.UserId, request.BusyBlocks);
+            var saved = _schedules.SaveForUser(request.UserId, blocks);
             return Ok(saved);
         }
         catch (ArgumentException ex)
@@ -39,7 +59,7 @@ public class SchedulesController : ControllerBase
             return BadRequest(ex.Message);
         }
     }
-
+    
     [HttpPost("meetings")]
     public IActionResult AddMeeting(CreateMeetingRequest request)
     {
